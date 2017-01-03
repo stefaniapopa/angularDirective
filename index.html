@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>Website exercitii 2016-2017</title>
+	<link rel="icon" 
+      type="image/jpg" 
+      href="photo.jpg">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+</head>
+<body>
+<label>Search: <input ng-model="searchText"></label>
+	<table style="width:100%" ng-controller='tableController'>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+    <th>Sex</th>
+    <th>Actions</th>
+  </tr>
+  <tr table-row ng-repeat= 'person in personList | filter:searchText track by $index'>
+   </tr>	
+   </table>
+      <script src="js/main.js"></script>
+</body>
+</html>
