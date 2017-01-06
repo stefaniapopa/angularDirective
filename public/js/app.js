@@ -1,5 +1,4 @@
-// alert('Inca putin si faci bani, continua');
-var app = angular.module("app", [])
+var app = angular.module("app", []);
 app.controller("tableController", function($scope) {
     var Person = function(firstName, lastName, age, gender) {
         this.firstName = firstName;
@@ -17,13 +16,5 @@ app.controller("tableController", function($scope) {
     $scope.deletePersone = function(idx) {
         var item_to_delete = $scope.personList[idx];
         $scope.personList.splice(idx, 1);
-    };
-
-
-});
-app.directive('tableRow', function($compile) {
-
-    return {
-        templateUrl: 'js/templates/tablerow.tpl.html'
     };
 });
