@@ -17,4 +17,9 @@ app.controller("tableController", function($scope) {
         var item_to_delete = $scope.personList[idx];
         $scope.personList.splice(idx, 1);
     };
+    $scope.reversedInput = 'default';
+
+    $scope.reverseString = function(input) {
+        $scope.reversedInput = input;
+    };
 });
