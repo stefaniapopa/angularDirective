@@ -27,5 +27,10 @@ app.controller("tableController", function($scope) {
     $scope.capitalizeString = function(input) {
         $scope.capitalizeInput = input.charAt(0).toUpperCase() + input.slice(1);
     };
+    $scope.showInput = '';
+
+    $scope.showString = function(input) {
+        $scope.showInput = input.substring(0, 10);
+    };
 
 });
