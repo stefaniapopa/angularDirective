@@ -1,14 +1,14 @@
 // alert('Inca putin si faci bani, continua');
 var app = angular.module("app", [])
 app.controller("tableController", function ($scope) {
-	var Person = function(firstName, lastName, age, sex ){
+	var Person = function(firstName, lastName, age, gender ){
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
-        this.sex = sex;
+        this.gender = gender;
 	};
-	var stefa = new Person("Stefa","Popa", 18, "feminin");
-	var justin = new Person("Justin","Popa", 26, "masculin"); 
+	var stefa = new Person("Stefa","Popa", 18, "Feminin");
+	var justin = new Person("Justin","Popa", 26, "Masculin"); 
 
      $scope.personList = [];
      $scope.personList.push(stefa);
@@ -25,6 +25,6 @@ app.controller("tableController", function ($scope) {
    app.directive('tableRow', function ($compile) {
 
     return {
-        template: '<tr><td ng-bind="person.firstName"></td><td><strong ng-bind="person.lastName"></strong></td><td ng-bind="person.age"></td><td ng-bind="person.sex"></td><td><button ng-click="deletePersone($index)">Delete</button></td></tr>'
+        template: '<div class="row"><div class="col-md-2" ng-bind="person.firstName"></div><div class="col-md-2"><div ng-bind="person.lastName"></div></div><div class="col-md-2" ng-bind="person.age"></div><div class="col-md-3" ng-bind="person.gender"></div><div class="col-md-3"><button ng-click="deletePersone($index)">Delete</button></div></div>'
     };
 });
