@@ -24,6 +24,6 @@ app.controller("tableController", function($scope) {
 app.directive('tableRow', function($compile) {
 
     return {
-        templateUrl: 'js/template/tablerow.tpl.html'
+        templateUrl: 'js/templates/tablerow.tpl.html'
     };
 });
