@@ -17,9 +17,15 @@ app.controller("tableController", function($scope) {
         var item_to_delete = $scope.personList[idx];
         $scope.personList.splice(idx, 1);
     };
-    $scope.reversedInput = 'default';
+    $scope.reversedInput = '';
 
     $scope.reverseString = function(input) {
-        $scope.reversedInput = input;
+        $scope.reversedInput = input.split('').reverse().join('');
     };
+    $scope.capitalizeInput = '';
+
+    $scope.capitalizeString = function(input) {
+        $scope.capitalizeInput = input.charAt(0).toUpperCase() + input.slice(1);
+    };
+
 });
